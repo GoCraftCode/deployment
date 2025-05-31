@@ -39,7 +39,7 @@
         - name: Clone Azure DevOps project
           run: |
             git config --global http.sslVerify false
-            git clone --branch master https://${TPAT_GITHUB}@${{ github.event.inputs.project_url }} project
+            git clone --branch main https://${TPAT_GITHUB}@${{ github.event.inputs.project_url }} project
           env:
             TPAT_GITHUB: ${{ secrets.TPAT_GITHUB }}
       
